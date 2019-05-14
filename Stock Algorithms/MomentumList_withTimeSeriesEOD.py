@@ -15,7 +15,6 @@ __yearAgo__="2018-04-13" #a year ago as compared to  __today__
 symbols_table = pd.read_html("https://en.wikipedia.org/wiki/List_of_S%26P_500_companies",
                                 header=0)[0]
 symbols = list(symbols_table.loc[:, "Symbol"])
-ss
 #2. Generate a table of S&P Stocks sorted by 12-month GMS
 GMSTable = []
 
