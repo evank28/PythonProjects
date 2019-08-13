@@ -37,14 +37,15 @@ def count_STV(ballots_table, details):
     Alex Brown: 52
     John Smith: 43
     
-    * Mary Jane was eliminated
+    * Mary Jane was eliminated.
+
     ##########
     COUNT 2 RESULTS:
     Alex Brown: 59
     John Smith: 60
-    Rejected (late): 1
+    Late Rejected: 1
 
-    *John Smith is declared as the winner
+    * John Smith is declared as the winner.
     """
     # read excel file
     wb = openpyxl.load_workbook(ballots_table)
@@ -62,15 +63,15 @@ def count_STV(ballots_table, details):
     # iterate through data, storing each ballot as a seperate dictionary entry
     ###### each dictionary entry should have a dictionary (ballot) as its value 
     ######### each of these dictionaries should be formatted with integer keys as the rank on the ballot, as long as the corresponding column was filled out
-    ballots={}
+    ballots = {}
     for row in range (2, ws.max_row + 1):
-        uid=ws['A'+str(row)].value
-        if uid!=None:
+        uid = ws['A'+str(row)].value
+        if uid != None:
             ballots.setdefault(uid,{})
             for col in range (2, ws.max_column+1 ):
-                rank=ws[cell.get_column_letter(col)+str(row)].value
-                if col-2<len(headings) and rank!="NaN" and rank!=None:
-                    ballots[uid][rank]=headings[col-2]
+                rank = ws[cell.get_column_letter(col)+str(row)].value
+                if col-2<len(headings) and rank != "NaN" and rank != None:
+                    ballots[uid][rank] = headings[col-2]
 
     rejected = { k : v for k,v in ballots.items() if not v} #tabulates any rejected ballots
     ballots = { k : v for k,v in ballots.items() if v}  #deletes any rejected ballots
@@ -144,7 +145,7 @@ def count_STV(ballots_table, details):
             detailed_results += "\n* {} was eliminated.\n".format(to_eliminate)
             ballot_count += 1
             for key in options:
-                options[key]=0
+                options[key] = 0
 
     if winner_found:
         if details:
