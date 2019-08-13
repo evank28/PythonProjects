@@ -2,14 +2,14 @@
 import pandas as pd
 import datetime
 import numpy as np
-import fix_yahoo_finance as yf
+import yfinance as yf
 import math
 
 actualToday_=(2019, 5, 13) #YYYY, MM, YY
-__today__="2019-06-01" #last month last trading day 
-__yearAgo__="2018-07-01" #a year ago as compared to  __today__
-__today_daily__ = "2019-06-01"
-__yearAgo_daily__ = "2018-07-01"
+__today__="2019-08-01" #last month last trading day 
+__yearAgo__="2018-09-01" #a year ago as compared to  __today__
+__today_daily__ = "2019-08-01"
+__yearAgo_daily__ = "2018-09-01"
 
 #1. Get a list of S&P stocks
 print("Downloading Russell 1000 data...")
