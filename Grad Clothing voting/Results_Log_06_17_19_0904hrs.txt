@@ -1,0 +1,263 @@
+Black is the winner.
+
+
+##########
+COUNT 1 RESULTS:
+Black: 11
+Charcoal: 1
+Dark Heather: 4
+Forest Green: 3
+Heather Charcoal: 1
+Heather Fuschia: 0
+Heather Gray: 2
+Heather Navy: 9
+Heather Purple: 6
+Heather Red: 0
+Heather Royal: 1
+Heather Black: 0
+Maroon: 11
+Navy: 9
+Purple: 4
+Red: 0
+Royal Blue: 1
+White: 8
+Rejected: 4
+
+* Heather Fuschia was eliminated.
+
+##########
+COUNT 2 RESULTS:
+Black: 11
+Charcoal: 1
+Dark Heather: 4
+Forest Green: 3
+Heather Charcoal: 1
+Heather Gray: 2
+Heather Navy: 9
+Heather Purple: 6
+Heather Red: 0
+Heather Royal: 1
+Heather Black: 0
+Maroon: 11
+Navy: 9
+Purple: 4
+Red: 0
+Royal Blue: 1
+White: 8
+
+* Heather Red was eliminated.
+
+##########
+COUNT 3 RESULTS:
+Black: 11
+Charcoal: 1
+Dark Heather: 4
+Forest Green: 3
+Heather Charcoal: 1
+Heather Gray: 2
+Heather Navy: 9
+Heather Purple: 6
+Heather Royal: 1
+Heather Black: 0
+Maroon: 11
+Navy: 9
+Purple: 4
+Red: 0
+Royal Blue: 1
+White: 8
+
+* Heather Black was eliminated.
+
+##########
+COUNT 4 RESULTS:
+Black: 11
+Charcoal: 1
+Dark Heather: 4
+Forest Green: 3
+Heather Charcoal: 1
+Heather Gray: 2
+Heather Navy: 9
+Heather Purple: 6
+Heather Royal: 1
+Maroon: 11
+Navy: 9
+Purple: 4
+Red: 0
+Royal Blue: 1
+White: 8
+
+* Red was eliminated.
+
+##########
+COUNT 5 RESULTS:
+Black: 11
+Charcoal: 1
+Dark Heather: 4
+Forest Green: 3
+Heather Charcoal: 1
+Heather Gray: 2
+Heather Navy: 9
+Heather Purple: 6
+Heather Royal: 1
+Maroon: 11
+Navy: 9
+Purple: 4
+Royal Blue: 1
+White: 8
+
+* Charcoal was eliminated.
+
+##########
+COUNT 6 RESULTS:
+Black: 11
+Dark Heather: 4
+Forest Green: 3
+Heather Charcoal: 1
+Heather Gray: 2
+Heather Navy: 9
+Heather Purple: 6
+Heather Royal: 1
+Maroon: 12
+Navy: 9
+Purple: 4
+Royal Blue: 1
+White: 8
+
+* Heather Charcoal was eliminated.
+
+##########
+COUNT 7 RESULTS:
+Black: 11
+Dark Heather: 5
+Forest Green: 3
+Heather Gray: 2
+Heather Navy: 9
+Heather Purple: 6
+Heather Royal: 1
+Maroon: 12
+Navy: 9
+Purple: 4
+Royal Blue: 1
+White: 8
+
+* Heather Royal was eliminated.
+
+##########
+COUNT 8 RESULTS:
+Black: 12
+Dark Heather: 5
+Forest Green: 3
+Heather Gray: 2
+Heather Navy: 9
+Heather Purple: 6
+Maroon: 12
+Navy: 9
+Purple: 4
+Royal Blue: 1
+White: 8
+
+* Royal Blue was eliminated.
+
+##########
+COUNT 9 RESULTS:
+Black: 13
+Dark Heather: 5
+Forest Green: 3
+Heather Gray: 2
+Heather Navy: 9
+Heather Purple: 6
+Maroon: 12
+Navy: 9
+Purple: 4
+White: 8
+
+* Heather Gray was eliminated.
+
+##########
+COUNT 10 RESULTS:
+Black: 13
+Dark Heather: 6
+Forest Green: 3
+Heather Navy: 9
+Heather Purple: 6
+Maroon: 12
+Navy: 9
+Purple: 4
+White: 9
+
+* Forest Green was eliminated.
+
+##########
+COUNT 11 RESULTS:
+Black: 15
+Dark Heather: 6
+Heather Navy: 9
+Heather Purple: 7
+Maroon: 12
+Navy: 9
+Purple: 4
+White: 9
+
+* Purple was eliminated.
+
+##########
+COUNT 12 RESULTS:
+Black: 15
+Dark Heather: 6
+Heather Navy: 9
+Heather Purple: 9
+Maroon: 14
+Navy: 9
+White: 9
+
+* Dark Heather was eliminated.
+
+##########
+COUNT 13 RESULTS:
+Black: 19
+Heather Navy: 9
+Heather Purple: 9
+Maroon: 14
+Navy: 9
+White: 10
+Late Rejected: 1
+
+* Heather Navy was eliminated.
+
+##########
+COUNT 14 RESULTS:
+Black: 21
+Heather Purple: 11
+Maroon: 15
+Navy: 12
+White: 11
+Late Rejected: 1
+
+* Heather Purple was eliminated.
+
+##########
+COUNT 15 RESULTS:
+Black: 25
+Maroon: 18
+Navy: 15
+White: 11
+Late Rejected: 2
+
+* White was eliminated.
+
+##########
+COUNT 16 RESULTS:
+Black: 25
+Maroon: 22
+Navy: 19
+Late Rejected: 5
+
+* Navy was eliminated.
+
+##########
+COUNT 17 RESULTS:
+Black: 35
+Maroon: 28
+Late Rejected: 8
+
+* Black is declared as the winner.
