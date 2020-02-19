@@ -31,6 +31,7 @@ This repository is to store and showcase some of my personal projects that have 
      investing strategies. See it's README for more.
      
 5. **Housholding Addresses**\
+    `FullHouseHolderByAddress-MergeFirstNames.py`\
     This project was coded in 2018 to take a list of mail recipients, as output by the
 NationBuilder CRM system, and to prepare this list for efficient mailing by
 postal mailing. The *main goal* of this is to prevent multiple pieces of mail
