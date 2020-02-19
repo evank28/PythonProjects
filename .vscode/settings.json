@@ -1,7 +1,7 @@
 {
     "python.linting.enabled": true,
-    "python.linting.pep8Enabled": false,
+    "python.linting.pycodestyleEnabled": false,
     "python.linting.pylintEnabled": true,
     "python.dataScience.jupyterServerURI": "local",
-    "python.pythonPath": "C:\\Program Files\\Python36\\python.exe"
+    "python.pythonPath": "C:\\Program Files\\Anaconda3\\python.exe"
 }
