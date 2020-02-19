@@ -1,4 +1,4 @@
-# Summarizing the Quantiative Momentum Algorithm to Be used
+# Summarizing the Quantitative Momentum Algorithm to Be used
 ##### Note: This was written by Evan Kanter as a sort of research notes or pseudocode in planning the eventual `MomentumList.py` script. However, large sections of this explanation have been copied from the book _Quantitative Momentum_ by Wesley Gray and Jack Vogel.
 - *Simple/Generic momentum:* calculate the **total return (including dividends)** of a stock over some particular **look-back period** (e.g., the past 12 months) (See Table 5.1 )
   - Get monthly Gross Returns by adding 1 to net return per month
