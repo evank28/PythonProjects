@@ -3,7 +3,7 @@ This script is written to take a list of mail recipients, outputted from the
 NationBuilder CRM system, and to prepare this list for efficient mailing by
 postal mailing. The *main goal* of this is to prevent multiple pieces of mail
 from being sent to the same address -- this is costly and inefficient. Instead,
-names at one address are combined in a way that is consistent with natual
+names at one address are combined in a way that is consistent with natural
 language, and letters are address appropriately to multiple recipients.
 """
 
