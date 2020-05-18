@@ -6,13 +6,13 @@ import fix_yahoo_finance as yf
 import math
 
 actualToday_=(2019, 5, 13) #YYYY, MM, YY
-__today__="2019-05-01" #last month last trading day 
-__yearAgo__="2018-06-01" #a year ago as compared to  __today__
+__today__="2019-05-01" #last month last trading day
+__yearAgo__="2018-06-01" #a year ago as compared to  TODAY
 __today_daily__ = "2019-05-01"
 __yearAgo_daily__ = "2018-06-01"
 
 symbols=["CHD"]
-#2. Generate a table of S&P Stocks sorted by 12-month GMS
+#2. Generate a table of S&P Stocks sorted by 12-month gms
 GMSTable = []
 
  #calculate for each stock by
@@ -36,15 +36,15 @@ for symbol in symbols:
         for month in returns:
             GMS*=(month+1)
         GMS-=1
-        
+
         GMSTable+=[(symbol,GMS)]
         print(symbol,GMS)
     except:
         print("Ticker:",str(symbol),"raised an error.")
 
-print("GMS by stock calculated. \nCalculating ID for top 50...")
+print("gms by stock calculated. \nCalculating ID for top 50...")
 
-#2.3 Sort by GMS
+#2.3 Sort by gms
 GMSTable_sorted=sorted(GMSTable, key=lambda x:x[1], reverse=True)
 
 #3. Create a slice with only the top 50
@@ -54,10 +54,10 @@ print(GMS_top50)
 IDTable=[]
 for stock in GMS_top50:
     symbol = stock[0]
-   
+
     ticker = yf.Ticker(symbol)
     history = ticker.history(period=None, start=__yearAgo_daily__, end=__today_daily__, interval="1d", auto_adjust = False, actions=False)
-    
+
     priceSummary= list(history[history.Close.notnull()]["Close"].subtract(history[history.Open.notnull()]["Open"]))
     print(history)
     print(priceSummary)
@@ -67,18 +67,18 @@ for stock in GMS_top50:
     cPositive=len([i for i in priceSummary if i>0])
     """
     counter=1
-    while counter<len(priceSummary)-1:
-            diff=priceSummary[counter]-priceSummary[counter-1]
+    while counter<len(price_summary)-1:
+            diff=price_summary[counter]-price_summary[counter-1]
             print(diff)
             if diff>0:
-                cPositive+=1
+                count_positive+=1
             else:
-                cNegative+=1
+                count_negative+=1
             counter+=1
     """
     days=len(priceSummary)
     ID = np.sign(stock[1]) * (100*cNegative/days - 100*cPositive/days)
-    
+
     result=stock+(ID,)
     IDTable.append(result)
     print(result)
