@@ -15,7 +15,7 @@ def format_results(results_dict: dict) -> str:
     """
     output = ""
     for option in results_dict:
-        output += "{}: {}".format(option, results_dict[option]) + "\n"
+        output += f"{option}: {results_dict[option]}\n"
     return output
 
 
@@ -134,8 +134,7 @@ def count_stv(ballots_table: str,
                 math.ceil(len(ballots) / 2) + 1):
             winner_found = True
             winner = max(options.items(), key=operator.itemgetter(1))[0]
-            detailed_results += "\n* {} is declared as the winner.\n".format(
-                winner)
+            detailed_results += f"\n* {winner} is declared as the winner.\n"
         # otherwise, pop out the minimum option and add it's key to the list
         # eliminated. Continue looping through
         else:
@@ -145,19 +144,19 @@ def count_stv(ballots_table: str,
                 del options[to_eliminate]
             except:
                 pass
-            detailed_results += "\n* {} was eliminated.\n".format(to_eliminate)
+            detailed_results += f"\n* {to_eliminate} was eliminated.\n"
             ballot_count += 1
             for key in options:
                 options[key] = 0
 
     if winner_found:
         if details:
-            return winner + " is the winner.\n\n" + detailed_results
-        return winner + " is the winner."
+            return f"{winner} is the winner. \n\n {detailed_results}"
+        return f"{winner} is the winner."
     # if the ballots dictionary is empty and no winner has been declared,
     # log an error
     else:
-        return "ERROR: No winner found. \n" + detailed_results
+        return f"ERROR: No winner found. \n {detailed_results}"
 
 
 if __name__ == "__main__":
