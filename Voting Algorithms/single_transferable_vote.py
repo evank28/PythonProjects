@@ -21,7 +21,8 @@ def format_results(results_dict: dict) -> str:
 
 # TODO: Add param number_of_winners so program can spit out multiple winners
 def count_stv(ballots_table: str,
-              details: bool):
+              details: bool,
+              number_of_winners: int = 1):
     """
     Takes an excel file formatted as a Google Form Multiple Choice Grid and \
     returns the winner per the Single Transferable Vote algorithm, as well as
@@ -163,5 +164,5 @@ if __name__ == "__main__":
     import os
 
     os.chdir("C:\\Users\\evank\\OneDrive\\Documents\\MyDevEnvironment\\"
-             "My Python Projects\\Grad Clothing voting")
+             "My Python Projects\\Voting Algorithms")
     print(count_stv("ballots_table.xlsx", True))

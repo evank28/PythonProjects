@@ -8,10 +8,10 @@ import pandas as pd
 import yfinance as yf
 
 # YYYY, MM, YY
-TODAY = "2020-08-01"  # last month last trading day
-YEAR_AGO = "2019-09-01"  # a year ago as compared to  TODAY
-TODAY_DAILY = "2020-08-01"
-YEAR_AGO_DAILY = "2019-09-01"
+TODAY = "2021-02-01"  # last month last trading day
+YEAR_AGO = "2020-03-01"  # a year ago as compared to  TODAY
+TODAY_DAILY = "2021-02-01"
+YEAR_AGO_DAILY = "2020-03-01"
 
 # 1. Get a list of S&P stocks
 print("Downloading Russell 1000 data...")
