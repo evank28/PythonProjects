@@ -1,5 +1,6 @@
 # from pandas_datareader import data
 import os
+from datetime import datetime
 from operator import itemgetter
 
 import numpy as np
@@ -8,10 +9,12 @@ import pandas as pd
 import yfinance as yf
 
 # YYYY, MM, YY
-TODAY = "2021-02-01"  # last month last trading day
-YEAR_AGO = "2020-03-01"  # a year ago as compared to  TODAY
-TODAY_DAILY = "2021-02-01"
-YEAR_AGO_DAILY = "2020-03-01"
+current_time = datetime.now()
+DATE_FORMAT_STR = "%Y-%m-01"
+TODAY = current_time.strftime(DATE_FORMAT_STR)  # last month last trading day + 1
+
+# a year ago as compared to TODAY, start of next month
+YEAR_AGO = current_time.replace(month=current_time.month + 1).strftime(DATE_FORMAT_STR)
 
 # 1. Get a list of S&P stocks
 print("Downloading Russell 1000 data...")
@@ -31,7 +34,7 @@ for symbol, company in symbols:
         ticker = yf.Ticker(symbol)
         history = ticker.history(period=None, start=YEAR_AGO, end=TODAY,
                                  interval="1mo", auto_adjust=True,
-                                 actions=False)
+                                 actions=False, threads=False)
 
         price_summary = list(history[history.Close.notnull()]["Close"])
         # 2.1 Get all monthly returns
@@ -50,8 +53,9 @@ for symbol, company in symbols:
 
         GMS_table += [(symbol, company, gms)]
         print(symbol, company, gms)
-    except:
-        print("Ticker:", str(symbol), "raised an API error.")
+    except Exception as e:
+        raise e
+        print("Ticker:", str(symbol), "raised an API error.", e)
 
 print("gms by stock calculated. \nCalculating ID for top 50...")
 
@@ -67,8 +71,8 @@ for stock in GMS_top50:
     symbol = stock[0]
     try:
         ticker = yf.Ticker(symbol)
-        history = ticker.history(period=None, start=YEAR_AGO_DAILY,
-                                 end=TODAY_DAILY, interval="1d",
+        history = ticker.history(period=None, start=YEAR_AGO,
+                                 end=TODAY, interval="1d",
                                  auto_adjust=False, actions=False)
         price_summary = list(history[history.Close.notnull()]["Close"].subtract(
             history[history.Open.notnull()]["Open"]))
@@ -95,8 +99,8 @@ for stock in GMS_top50:
         ID_table.append(result)
         print(result)
 
-    except:
-        print("Ticker:", str(symbol), "raised an error.")
+    except Exception as e:
+        print("Ticker:", str(symbol), "raised an error.", e)
 
 # sort by ID
 ID_table = sorted(ID_table, key=lambda x: x[3], reverse=False)
@@ -120,7 +124,7 @@ ID_table = sorted(ID_table, key=lambda x: x[3], reverse=False)
 # 5. Output a slice of the top 25
 print("\n\nTOP MOMENTUM STOCKS")
 i = 0
-for i in range(0, 25):  # CHANGE THIS IF MORE THAN 25 STOCKS NEEDED
+for i in range(0, 26):  # CHANGE THIS IF MORE THAN 25 STOCKS NEEDED
 
     print("#" + str(i + 1) + ".", ID_table[i][0],
           f"(Details: company={ID_table[i][1]}, gms=" + str(round(ID_table[i][2] * 100, 2)),
